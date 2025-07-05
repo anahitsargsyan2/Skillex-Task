@@ -1,4 +1,3 @@
-import { pool } from "../database.js";
 import { generateItemsFromCounts, generateValidCombinations } from "../services/combinationService.js";
 
 export async function generateCombinations(req, res) {
