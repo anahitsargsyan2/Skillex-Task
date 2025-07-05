@@ -1,8 +1,9 @@
 import express from "express";
 import { generateCombinations } from "../controllers/combinationController.js";
+import { validateCombinationRequest } from "../middlewares/combination.middleware.js";
 
 const router = express.Router();
 
-router.post("/combinations", generateCombinations);
+router.post("/combinations", validateCombinationRequest, generateCombinations);
 
 export default router;
