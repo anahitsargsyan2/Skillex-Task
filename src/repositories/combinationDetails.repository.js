@@ -1,4 +1,4 @@
-import { COMBINATION_DETAILS } from "../constants/tableNames.js";
+import { COMBINATION_DETAILS } from "../constants/table-names.js";
 
 export async function insertCombinationDetails(client, items, length) {
     const itemsText = items.join();

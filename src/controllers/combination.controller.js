@@ -1,7 +1,7 @@
 import pool from "../../database.js";
-import { insertCombinationDetails } from "../repositories/combinationDetailsRepository.js";
-import { insertCombinations } from "../repositories/combinationsRepositry.js";
-import { generateItemsFromCounts, generateValidCombinations } from "../services/combinationService.js";
+import { insertCombinationDetails } from "../repositories/combinationDetails.repository.js";
+import { insertCombinations } from "../repositories/combinations.repository.js";
+import { generateItemsFromCounts, generateValidCombinations } from "../services/combination.service.js";
 
 export async function generateCombinations(req, res) {
   const { items, length } = req.body;

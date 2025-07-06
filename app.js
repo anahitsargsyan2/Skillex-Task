@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
-import combinationRoutes from "./src/routes/combinationRoutes.js";
-import healthRoutes from "./src/routes/healthRoutes.js";
+import combinationRoutes from "./src/routes/combination.routes.js";
+import healthRoutes from "./src/routes/health.routes.js";
 import pool, { initializeTables } from "./database.js";
 
 dotenv.config();

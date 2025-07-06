@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import pkg from "pg";
-import { COMBINATION_DETAILS, COMBINATIONS } from "./src/constants/tableNames.js";
+import { COMBINATION_DETAILS, COMBINATIONS } from "./src/constants/table-names.js";
 
 const { Pool } = pkg;
 

@@ -1,4 +1,4 @@
-import { COMBINATIONS } from "../constants/tableNames.js";
+import { COMBINATIONS } from "../constants/table-names.js";
 
 export async function insertCombinations(client, combinations, combinationDetailsId) {
     const combinationsJson = JSON.stringify(combinations);
