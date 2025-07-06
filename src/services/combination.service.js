@@ -30,13 +30,13 @@ export function generateValidCombinations(items, combinationLength) {
   function backtrack(startIndex, path, usedPrefixes) {
     if (path.length === combinationLength) {
       results.push([...path]);
-      
+
       return;
     }
 
     for (let i = startIndex; i < items.length; i++) {
       const item = items[i];
-      const prefix = item.split('_')[0]; 
+      const prefix = item.split('_')[0];
 
       if (usedPrefixes.has(prefix)) continue;
 

@@ -1,9 +1,9 @@
-import { COMBINATION_DETAILS } from "../constants/table-names.js";
+import { COMBINATION_DETAILS } from '../constants/table-names.js';
 
 export async function insertCombinationDetails(client, items, length) {
-    const itemsText = items.join();
+  const itemsText = items.join();
 
-   const result = await client.query(
+  const result = await client.query(
     `
     INSERT INTO ${COMBINATION_DETAILS} (items, length)
     VALUES ($1, $2)
@@ -12,5 +12,5 @@ export async function insertCombinationDetails(client, items, length) {
     [itemsText, length]
   );
 
-  return result.rows[0]; 
-}   
+  return result.rows[0];
+}

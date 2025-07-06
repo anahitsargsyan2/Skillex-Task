@@ -1,6 +1,6 @@
-import dotenv from "dotenv";
-import pkg from "pg";
-import { COMBINATION_DETAILS, COMBINATIONS } from "./src/constants/table-names.js";
+import dotenv from 'dotenv';
+import pkg from 'pg';
+import { COMBINATION_DETAILS, COMBINATIONS } from './src/constants/table-names.js';
 
 const { Pool } = pkg;
 
@@ -18,7 +18,7 @@ export async function initializeTables() {
   const client = await pool.connect();
 
   try {
-    await client.query("BEGIN");
+    await client.query('BEGIN');
 
     await client.query(`
       CREATE TABLE IF NOT EXISTS ${COMBINATION_DETAILS} (
@@ -36,11 +36,11 @@ export async function initializeTables() {
       )
     `);
 
-    await client.query("COMMIT");
-    console.log("✅ Tables created or verified.");
+    await client.query('COMMIT');
+    console.log('Tables created or verified.');
   } catch (err) {
-    await client.query("ROLLBACK");
-    console.error("❌ Error creating tables:", err);
+    await client.query('ROLLBACK');
+    console.error('Error creating tables:', err);
   } finally {
     client.release();
   }
